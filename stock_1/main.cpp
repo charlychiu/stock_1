@@ -13,18 +13,7 @@
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-    /*srand((unsigned)time(NULL));
-    int ans[10];
-    for(int i=0;i<10;i++)
-    {
-        ans[i]=rand()%100;
-        
-    }
-    for(int i=0;i<10;i++)
-    {
-        cout<<ans[i]<<" ";
-    }*/
-    int price[]={2,3,4,3,2,1,2,3,4,5,4,3,4,5,6,7};
+        int price[]={2,3,4,3,2,1,2,3,4,5,4,3,4,5,6,7};
     int num=sizeof(price)/sizeof(price[0]);
     int fin[num];
     fin[0]=1;

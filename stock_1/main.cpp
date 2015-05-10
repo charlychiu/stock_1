@@ -33,26 +33,24 @@ int main(int argc, const char * argv[]) {
         cout<<price[i]<<" ";
     }
     //start...
-    for(int i=0;i<num;i++)
+    for(int i=1;i<num;i++)
     {
         
-        for(int j=i-1;j>=0;--j)
-        {
             int static plus=1;
-            if(price[i]<price[j])
+            if(price[i]<price[i-1])
             {
                 plus++;
                 fin[i]=plus;
-                break;
+                
             }
             else
             {
                 fin[i]=1;
                 plus=1;
-                break;
+                
             }
            
-        }
+        
     }
     cout<<endl;
     for(int i=0;i<num;i++)

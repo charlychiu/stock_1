@@ -41,7 +41,6 @@ int main(int argc, const char * argv[]) {
             int static plus=1;
             if(price[i]<price[j])
             {
-                fin[j]=1;
                 plus++;
                 fin[i]=plus;
                 break;
@@ -50,6 +49,7 @@ int main(int argc, const char * argv[]) {
             {
                 fin[i]=1;
                 plus=1;
+                break;
             }
            
         }

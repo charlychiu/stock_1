@@ -13,7 +13,7 @@
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-        int price[]={2,3,4,3,2,1,2,3,4,5,4,3,4,5,6,7};
+    int price[]={2,3,4,3,2,1,2,3,4,5,4,3,4,5,6,7};
     int num=sizeof(price)/sizeof(price[0]);
     int fin[num];
     fin[0]=1;

@@ -8,43 +8,43 @@
 
 #include <iostream>
 #include <cstdlib>
+#include <string>
 #include <ctime>
+#include <iomanip>
 
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-    int price[]={2,3,4,3,2,1,2,3,4,5,4,3,4,5,6,7};
+    int price[]={100,90,80,60,50,52,56,70,72,66,60,68,88,75,90,96,100};
     int num=sizeof(price)/sizeof(price[0]);
     int fin[num];
     fin[0]=1;
     for(int i=0;i<num;i++)
     {
-        cout<<price[i]<<" ";
+        cout<<setw(3)<<price[i]<<" ";
     }
     //start...
-    for(int i=1;i<num;i++)
+    for(int i=0;i<num;i++)
     {
-        
-            int static plus=1;
-            if(price[i]<price[i-1])
+        for(int j=i-1;j>=0;j--)
+        {
+            static int o=0;
+            o++;
+            if(price[j]>=price[i])
             {
-                plus++;
-                fin[i]=plus;
+                fin[i]=o;
+                o=0;
+                break;
                 
             }
-            else
-            {
-                fin[i]=1;
-                plus=1;
-                
-            }
-           
+            
+        }
         
     }
     cout<<endl;
     for(int i=0;i<num;i++)
     {
-        cout<<fin[i]<<" ";
+        cout<<setw(3)<<fin[i]<<" ";
     }
     return 0;
 }
